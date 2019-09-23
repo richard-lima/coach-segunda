@@ -9,6 +9,6 @@ def index(request):
         ],
         'vazio': False,
         'teste': 'teste'}
-        
+
     return render(request, 'index.html', context)
  
