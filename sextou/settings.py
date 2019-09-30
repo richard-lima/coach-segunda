@@ -25,7 +25,7 @@ SECRET_KEY = '_!2a^l2uej@lv%%im(_f^t(nv17vapl74d%t#1_=ou&v)$584o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['coachsegunda.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -119,3 +119,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+import django_heroku
+
+...
+
+django_heroku.settings(locals())
